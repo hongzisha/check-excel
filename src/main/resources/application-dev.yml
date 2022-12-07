@@ -1,0 +1,15 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /check-excel
+
+logging:
+  file:
+    path: /apps/check-excel/logs
+  level:
+    com.example.bonc: info
+    org.springframework: warn
+
+#服务云ftp目录路径
+filePath:
+  path: /apps/check-excel
