@@ -20,5 +20,10 @@ public interface CheckExcelService {
      */
     ResultObject checkout(Check check);
 
-    ResultObject shell(Split split);
+    /**
+     * 拆分服务云文件
+     * @param split 拆分信息
+     * @return 拆分结果
+     */
+    ResultObject split(Split split);
 }

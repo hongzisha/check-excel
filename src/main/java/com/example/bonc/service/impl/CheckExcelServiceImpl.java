@@ -227,7 +227,7 @@ public class CheckExcelServiceImpl implements CheckExcelService {
      * @return 返回拆分后的文件名
      */
     @Override
-    public ResultObject shell(Split split) {
+    public ResultObject split(Split split) {
         String sourcePath = path + File.separator + split.getFileName();
         // 判断分割文件个数是否超过限制
         if (split.getFileNumber() > 5) {
@@ -292,7 +292,7 @@ public class CheckExcelServiceImpl implements CheckExcelService {
                 pw.write(tempLine + "\n");
                 lineNum++;
             }
-            log.info("返回文件列表：{}", resultFileNames.toString());
+            log.info("返回文件列表：{}", resultFileNames);
         } catch (Exception e) {
             log.error("拆分文件异常: {}", e.toString());
         } finally {

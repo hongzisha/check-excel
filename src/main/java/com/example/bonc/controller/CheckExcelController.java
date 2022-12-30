@@ -26,8 +26,8 @@ public class CheckExcelController {
     public ResultObject check (@RequestBody Check check) {
         return checkExcelService.checkout(check);
     }
-    @PostMapping("/shell")
+    @PostMapping("/split")
     public ResultObject shell (@RequestBody Split split){
-        return checkExcelService.shell(split);
+        return checkExcelService.split(split);
     }
 }
